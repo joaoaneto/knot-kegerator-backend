@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-<<<<<<< 7f8e4b68d0348a53576ec74bd2adb590e25165c5
 import MeshbluSocketIO from 'meshblu';
 
 class CloudConnection {
@@ -26,31 +25,6 @@ class CloudConnection {
     });
 
     return this.connection;
-=======
-import meshblu from 'meshblu';
-
-let instance = null;
-
-class CloudConnection {
-  constructor(company) {
-    if (!instance) {
-      this.company = company;
-      this.connection = this.start(company);
-      instance = this;
-    }
-    return instance;
-  }
-
-  start() {
-    const meshbluConnection = meshblu.createConnection({
-      server: this.company.server,
-      port: this.company.port,
-      uuid: this.company.uuid,
-      token: this.company.token,
-    });
-
-    return meshbluConnection;
->>>>>>> Setup tap on cloud store
   }
 
   close() {
