@@ -34,11 +34,17 @@ function createTest(data) {
   return around(tape)
     .before((t) => {
       const mongoStore = {
+<<<<<<< eb714961e2ed6880dc10e8f2a55b0eed68be2354
         getTap: sinon.stub().resolves(data),
         setupTap: sinon.stub().resolves(),
       };
       const cloudStore = {
         getTap: sinon.stub().resolves(data),
+=======
+        setupTap: sinon.stub().resolves(),
+      };
+      const cloudStore = {
+>>>>>>> Add domain rules to setup tap
         setupTap: sinon.stub().resolves(),
       };
       t.next(mongoStore, cloudStore, data);
